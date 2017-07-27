@@ -1,19 +1,19 @@
-## react-native-media-player
+## rn-video
 
 > This is a fork from https://github.com/react-native-community/react-native-video
 
 A `<Video>` component for react-native, as seen in
 [react-native-login](https://github.com/brentvatne/react-native-login)!
 
-Requires react-native >= 0.40.0, for RN support of 0.19.0 - 0.39.0 please use a pre 1.0 version.
+Requires react-native >= 0.40.0.
 
 ### Add it to your project
 
-Run `npm i -S react-native-video`
+Run `npm i -S rn-video`
 
 #### iOS
 
-Run `react-native link` to link the react-native-video library.
+Run `react-native link` to link the rn-video library.
 
 If you would like to allow other apps to play music over your video component, add:
 
@@ -33,7 +33,7 @@ Note: you can also use the `ignoreSilentSwitch` prop, shown below.
 
 #### tvOS
 
-Run `react-native link` to link the react-native-video library.
+Run `react-native link` to link the rn-video library.
 
 `react-native link` don’t works properly with the tvOS target so we need to add the library manually.
 
@@ -53,19 +53,19 @@ Select RCTVideo-tvOS
 
 <img src="./docs/tvOS-step-4.jpg" width="40%">
 
-That’s all, you can use react-native-video for your tvOS application
+That’s all, you can use rn-video for your tvOS application
 
 #### Android
 
-Run `react-native link` to link the react-native-video library.
+Run `react-native link` to link the rn-video library.
 
 Or if you have trouble, make the following additions to the given files manually:
 
 **android/settings.gradle**
 
 ```gradle
-include ':react-native-video'
-project(':react-native-video').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-video/android')
+include ':rn-video'
+project(':rn-video').projectDir = new File(rootProject.projectDir, '../node_modules/rn-video/android')
 ```
 
 **android/app/build.gradle**
@@ -73,7 +73,7 @@ project(':react-native-video').projectDir = new File(rootProject.projectDir, '..
 ```gradle
 dependencies {
    ...
-   compile project(':react-native-video')
+   compile project(':rn-video')
 }
 ```
 
@@ -108,8 +108,8 @@ Add the `ReactNativeVideo` project to your solution.
 1. Open the solution in Visual Studio 2015
 2. Right-click Solution icon in Solution Explorer > Add > Existing Project...
 3.
-  UWP: Select `node_modules\react-native-video\windows\ReactNativeVideo\ReactNativeVideo.csproj`
-  WPF: Select `node_modules\react-native-video\windows\ReactNativeVideo.Net46\ReactNativeVideo.Net46.csproj`
+  UWP: Select `node_modules\rn-video\windows\ReactNativeVideo\ReactNativeVideo.csproj`
+  WPF: Select `node_modules\rn-video\windows\ReactNativeVideo.Net46\ReactNativeVideo.Net46.csproj`
 
 **windows/myapp/myapp.csproj**
 
@@ -229,7 +229,7 @@ var styles = Stylesheet.create({
 
 ### Load files with the RN Asset System
 
-The asset system [introduced in RN `0.14`](http://www.reactnative.com/react-native-v0-14-0-released/) allows loading image resources shared across iOS and Android without touching native code. As of RN `0.31` [the same is true](https://github.com/facebook/react-native/commit/91ff6868a554c4930fd5fda6ba8044dbd56c8374) of mp4 video assets for Android. As of [RN `0.33`](https://github.com/facebook/react-native/releases/tag/v0.33.0) iOS is also supported. Requires `react-native-video@0.9.0`.
+The asset system [introduced in RN `0.14`](http://www.reactnative.com/react-native-v0-14-0-released/) allows loading image resources shared across iOS and Android without touching native code. As of RN `0.31` [the same is true](https://github.com/facebook/react-native/commit/91ff6868a554c4930fd5fda6ba8044dbd56c8374) of mp4 video assets for Android. As of [RN `0.33`](https://github.com/facebook/react-native/releases/tag/v0.33.0) iOS is also supported.
 
 ```
 <Video
@@ -239,10 +239,6 @@ The asset system [introduced in RN `0.14`](http://www.reactnative.com/react-nati
   style={styles.backgroundVideo}
 />
 ```
-
-### Play in background on iOS
-
-To enable audio to play in background on iOS the audio session needs to be set to `AVAudioSessionCategoryPlayback`. See [Apple documentation][3] for additional details. (NOTE: there is now a ticket to [expose this as a prop]( https://github.com/react-native-community/react-native-video/issues/310) )
 
 ## Static Methods
 
@@ -256,12 +252,12 @@ Toggles a fullscreen player. Access using a ref to the component.
 
 ## Examples
 
-- See an [Example integration][1] in `react-native-login` *note that this example uses an older version of this library, before we used `export default` -- if you use `require` you will need to do `require('react-native-video').default` as per instructions above.*
+- See an [Example integration][1] in `react-native-login` *note that this example uses an older version of this library, before we used `export default` -- if you use `require` you will need to do `require('rn-video').default` as per instructions above.*
 - Try the included [VideoPlayer example][2] yourself:
 
    ```sh
-   git clone git@github.com:react-native-community/react-native-video.git
-   cd react-native-video/example
+   git clone git@github.com:spoonx/rn-video.git
+   cd rn-video/example
    npm install
    open ios/VideoPlayer.xcodeproj
 
@@ -279,7 +275,7 @@ Toggles a fullscreen player. Access using a ref to the component.
 - [ ] Bring API closer to HTML5 `<Video>` [reference](http://devdocs.io/html/element/video)
 
 [1]: https://github.com/brentvatne/react-native-login/blob/56c47a5d1e23781e86e19b27e10427fd6391f666/App/Screens/UserInfoScreen.js#L32-L35
-[2]: https://github.com/react-native-community/react-native-video/tree/master/example
+[2]: https://github.com/spoonx/rn-video/tree/master/example
 [3]: https://developer.apple.com/library/ios/qa/qa1668/_index.html
 
 ---

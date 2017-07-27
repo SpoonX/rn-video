@@ -1,5 +1,5 @@
 {
-  "name": "react-native-media-player",
+  "name": "rn-video",
   "version": "1.0.0",
   "description": "A <Video /> element for react-native",
   "main": "Video.js",
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:spoonx/react-native-media-player.git"
+    "url": "git@github.com:spoonx/rn-video.git"
   },
   "devDependencies": {
     "jest-cli": "0.2.1",
