@@ -1,4 +1,6 @@
-## react-native-video
+## react-native-media-player
+
+> This is a fork from https://github.com/react-native-community/react-native-video
 
 A `<Video>` component for react-native, as seen in
 [react-native-login](https://github.com/brentvatne/react-native-login)!

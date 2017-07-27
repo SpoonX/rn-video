@@ -1,11 +1,15 @@
 {
-  "name": "react-native-video",
-  "version": "1.1.0",
+  "name": "react-native-media-player",
+  "version": "1.0.0",
   "description": "A <Video /> element for react-native",
   "main": "Video.js",
   "license": "MIT",
-  "author": "Brent Vatne <brentvatne@gmail.com> (https://github.com/brentvatne)",
+  "author": "Wesley Overdijk <r.w.overdijk@gmail.com> (https://github.com/SpoonX)",
   "contributors": [
+    {
+      "name": "Brent Vatne",
+      "email": "brentvatne@gmail.com"
+    },
     {
       "name": "Johannes Lumpe",
       "email": "johannes@lum.pe"
@@ -17,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:brentvatne/react-native-video.git"
+    "url": "git@github.com:spoonx/react-native-media-player.git"
   },
   "devDependencies": {
     "jest-cli": "0.2.1",
